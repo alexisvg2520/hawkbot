@@ -38,7 +38,7 @@
         <a href="index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="pages/examples/contacts.html" class="nav-link">Contactos</a>
+        <a href="pages/contacts.html" class="nav-link">Contactos</a>
       </li>
     </ul>
 
@@ -90,23 +90,6 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Recolección de datos
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Monitoreo</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-header">FUNCIONALIDAD</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -118,13 +101,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/examples/contacts.html" class="nav-link">
+                <a href="pages/contacts.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contactos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/contact-us.html" class="nav-link">
+                <a href="pages/contact-us.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contáctenos</p>
                 </a>
@@ -135,7 +118,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
-                Elementos de Ingreso y Registro
+                Elementos Adicionales
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -150,25 +133,25 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login.html" class="nav-link">
+                    <a href="pages/login.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Login</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/register.html" class="nav-link">
+                    <a href="pages/register.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Registro</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                    <a href="pages/forgot-password.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Contraseña olvidada</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/recover-password.html" class="nav-link">
+                    <a href="pages/recover-password.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Recuperar contraseña</p>
                     </a>
@@ -176,19 +159,19 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
+                <a href="pages/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lockscreen</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
+                <a href="pages/404.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Error 404</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
+                <a href="pages/500.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Error 500</p>
                 </a>
@@ -238,7 +221,7 @@
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
-                    <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
+                    <button type="button" class="btn btn-sm" data-card-widget="collapse" title="Collapse">
                       <i class="fas fa-minus"></i>
                     </button>
                   </ul>
@@ -246,14 +229,7 @@
               </div><!-- /.card-header -->
               <div class="card-body">
                 <div class="tab-content p-0">
-                  <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                   </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                  </div>
+                  
                   
                 </div>
               </div><!-- /.card-body -->
@@ -269,7 +245,7 @@
 
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
-                    <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
+                    <button type="button" class="btn btn-sm" data-card-widget="collapse" title="Collapse">
                       <i class="fas fa-minus"></i>
                     </button>
                   </ul>
@@ -277,7 +253,10 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                
+                <div class="tab-content p-0">
+                  
+                  
+                </div>
               </div>
               <!-- /.card-body -->
              
@@ -307,6 +286,12 @@
               </div>
               <!-- /.card-body-->
               <div class="card-footer clearfix">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary">PDF</button>
+                  <button type="button" class="btn btn-secondary">PNG</button>
+                  <button type="button" class="btn btn-secondary">Excel</button>
+                  <button type="button" class="btn btn-secondary">TXT</button>
+                </div>
                 <button type="button" class="btn btn-primary float-right"><i class="ion ion-gear-a"></i> Filtrar</button>
               </div>
             </div>
