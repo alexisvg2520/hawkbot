@@ -299,19 +299,19 @@
                 <!-- Selección de datos -->
                 <div class="form-group">
                   <label for="ciudades">Seleccione la Ciudad</label>
-                  <select class="form-control" id="ciudades">
+                  <select class="form-control" id="opcion_ciudades">
                     <option>Ciudad</option>
-                    <option>Quito</option>
-                    <option>Guayaquil</option>
+                    <option value="1">Quito</option>
+                    <option value="2">Guayaquil</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="productos">Seleccione el Producto </label>
-                  <select method="post" action="consular.php" class="form-control" id="productos">
-                    <option name ="producto">Producto </option>
-                    <option name="computadora">Computadora</option>
-                    <option name="laptop">Laptop</option>
-                    <option name ="celular">Celular</option>
+                  <select class="form-control" id="opcion_productos">
+                    <option>Producto </option>
+                    <option value="1">Computadora</option>
+                    <option value="2">Laptop</option>
+                    <option value="3">Celular</option>
                 
                   </select>
                 </div>
@@ -393,8 +393,8 @@
         text: 'VENTAS DE COMPUTADORAS EN LA CIUDAD DE QUITO AÑO 2014'
      };
      var xAxis = {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+           'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
      };
      var yAxis = {
         title: {
