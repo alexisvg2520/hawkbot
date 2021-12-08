@@ -38,7 +38,7 @@ try {
     // use exec() because no results are returned
     $conn1->exec($sql1);
      
-    echo "Tabla ventas_uio creada correctamente";
+    echo "Tabla ventas_gye creada correctamente";
     
   } catch(PDOException $e) {
     echo $sql1 . "<br>" . $e->getMessage();
@@ -102,7 +102,7 @@ try {
       $sql23 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('laptop',3904,'2016-10-01')";
       $sql24 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',2900,'2015-12-01')";
       $sql25 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',1028,'2012-01-01')";
-      $sql26 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',900,'20005-04-01')";
+      $sql26 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',900,'2005-04-01')";
       $sql27 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',1000,'2019-05-01')";
       $sql28 = "INSERT INTO ventas_uio (Nombre_producto, Costos,Fecha)VALUES('celular',1990,'2018-07-01')";
      
@@ -139,6 +139,72 @@ try {
     }
     
     $conn3 = null;
+
+
+    try {
+      $conn4 = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn4->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $sql100 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha) VALUES('computadora',8500,'2020-02-01')";
+      $sql101 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha) VALUES('computadora',7000,'2020-09-01')";
+      $sql102 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha) VALUES('computadora',8720,'2019-02-01')";
+      $sql103 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',2060,'2017-11-01')";
+      $sql104 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',7040,'2018-12-01')";
+      $sql105 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',8530,'2020-04-01')";
+      $sql106 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',6900,'2016-07-01')";
+      $sql107 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',5040,'2014-08-01')";
+      $sql108 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',3990,'2012-10-01')";
+      $sql109 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',6790,'2017-09-01')";
+      $sql110 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',5870,'2016-01-01')";
+      $sql111= "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',6990,'2019-01-01')";
+      $sql112 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',6790,'2018-04-01')";
+      $sql113 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',5000,'2017-09-01')";
+      $sql114 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',5890,'2016-02-01')";
+      $sql115 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',5500,'2016-01-01')";
+      $sql116 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',4300,'2015-12-01')";
+      $sql117 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',2030,'2009-08-01')";
+      $sql118 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',2500,'2015-10-01')";
+      $sql119 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',4000,'2018-05-01')";
+      $sql120 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',3990,'2010-11-01')";
+      $sql121 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('celular',3000,'2016-03-01')";
+      $sql122 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('celular',3500,'2019-04-01')";
+      $sql123 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('celular',2500,'2017-07-01')";
+      $sql124 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('celular',1000,'2015-06-01')";
+      $sql125 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('celular',850,'2008-12-01')";
+     
+      $conn4->exec($sql100);
+      $conn4->exec($sql101);
+      $conn4->exec($sql102);
+      $conn4->exec($sql103);
+      $conn4->exec($sql104);
+      $conn4->exec($sql105);
+      $conn4->exec($sql106);
+      $conn4->exec($sql107);
+      $conn4->exec($sql108);
+      $conn4->exec($sql109);
+      $conn4->exec($sql110);
+      $conn4->exec($sql111);
+      $conn4->exec($sql112);
+      $conn4->exec($sql113);
+      $conn4->exec($sql114);
+      $conn4->exec($sql115);
+      $conn4->exec($sql116);
+      $conn4->exec($sql117);
+      $conn4->exec($sql118);
+      $conn4->exec($sql119);
+      $conn4->exec($sql120);
+      $conn4->exec($sql121);
+      $conn4->exec($sql122);
+      $conn4->exec($sql123);
+      $conn4->exec($sql124);
+      $conn4->exec($sql125);
+      
+      echo "New record created successfully";
+    } catch(PDOException $e) {
+      echo $sql3 . "<br>" . $e->getMessage();
+    }
+    
+    $conn4 = null;
     ?>
 
 
