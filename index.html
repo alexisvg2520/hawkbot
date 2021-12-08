@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Fecha -->
-
+  <!-- Figuras -->
+  <link rel="stylesheet" href="dist\css\highchart.css">
 
 
 </head>
@@ -220,7 +220,7 @@
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-bar mr-1"></i>
-                  Gráfica
+                  Gráfico
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
@@ -233,6 +233,12 @@
               <div class="card-body">
                 <div class="tab-content p-0">
                   
+                  <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description">
+                
+                    </p>
+                  </figure>
                   
                 </div>
               </div><!-- /.card-body -->
@@ -361,10 +367,17 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+
+<!--HighCharts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="dist\js\highcharts.js"></script>
+
 </body>
 </html>
