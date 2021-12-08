@@ -156,7 +156,7 @@ try {
       $sql108 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',3990,'2012-10-01')";
       $sql109 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',6790,'2017-09-01')";
       $sql110 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('computadora',5870,'2016-01-01')";
-      $sql111= "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',6990,'2019-01-01')";
+      $sql111 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',6990,'2019-01-01')";
       $sql112 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',6790,'2018-04-01')";
       $sql113 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',5000,'2017-09-01')";
       $sql114 = "INSERT INTO ventas_gye (Nombre_producto, Costos,Fecha)VALUES('laptop',5890,'2016-02-01')";
