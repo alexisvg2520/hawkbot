@@ -14,7 +14,7 @@
     if (window.___browserSync___ === undefined && Number(localStorage.getItem('AdminLTE:Demo:MessageShowed')) < Date.now()) {
       localStorage.setItem('HackoBot:Demo:Mensaje', (Date.now()) + (15 * 60 * 1000))
       // eslint-disable-next-line no-alert
-      alert('Usted está en una página de prueba de HackoBot, este sitio es sólo de prueba!')
+      alert('Usted está en una página de prueba de HawkoBot, este sitio es sólo de prueba!')
     }
   }, 1000)
 
