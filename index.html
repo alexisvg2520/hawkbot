@@ -298,28 +298,26 @@
               <div class="card-body">
                 <!-- Selección de datos -->
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Example select</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <label for="ciudades">Seleccione la Ciudad</label>
+                  <select class="form-control" id="ciudades">
+                    <option>Ciudad</option>
+                    <option>Quito</option>
+                    <option>Guayaquil</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Example select</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <label for="productos">Seleccione el Producto </label>
+                  <select method="post" action="consular.php" class="form-control" id="productos">
+                    <option name ="producto">Producto </option>
+                    <option name="computadora">computadora</option>
+                    <option name="laptop">laptop</option>
+                    <option name ="celular">celular</option>
+                
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Fecha</label>
-                  <input class="form-control" type="number" placeholder="YYYY" min="2000" max="2020">
+                  <label for="fecha">Fecha</label>
+                  <input class="form-control" id ="fecha" type="number" placeholder="YYYY" min="2000" max="2020">
                 </div>
                 
               </div>
@@ -382,11 +380,17 @@
 
 <script language = "JavaScript">
   $(document).ready(function() {
-     var title = {
-        text: 'Monthly Average Temperature'   
+
+
+     var title= {
+       
+        text: ''
+         
      };
+    
+          
      var subtitle = {
-        text: 'Source: WorldClimate.com'
+        text: 'VENTAS DE COMPUTADORAS EN LA CIUDAD DE QUITO AÑO 2014'
      };
      var xAxis = {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
