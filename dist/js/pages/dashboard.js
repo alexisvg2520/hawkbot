@@ -31,6 +31,33 @@ $(document).ready(function() {
     let producto=$("#opcion_productos option:selected").text();
     let anio=$("#fecha").val();
 
+    $.ajax({
+      url: 'dist\php\mostrar_datos.php',
+      type: 'POST',
+      async: true,
+      data: ciudad,
+      success: procesaRespuesta,
+      error: muestraError
+    });
+    $.ajax({
+      url: 'dist\php\mostrar_datos.php',
+      type: 'POST',
+      async: true,
+      data: producto,
+      success: procesaRespuesta,
+      error: muestraError
+    });
+
+    $.ajax({
+      url: 'dist\php\mostrar_datos.php',
+      type: 'POST',
+      async: true,
+      data: anio,
+      success: procesaRespuesta,
+      error: muestraError
+    });
+
+
     $("#figura1").fadeIn(3000,function(){
       var title= {
     
