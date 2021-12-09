@@ -407,4 +407,25 @@
 
 
 </body>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script languaje="JavaScript">
+  $(function () {
+    window.chart = new Highcharts.Chart({
+        chart: {renderTo : 'container'}
+    });
+
+    $("#btnPDF").click(function(){
+        // Export method ?
+        // Ajax call ?
+        var chart = $('#container').highcharts();
+        chart.exportChart({
+            type: 'application/pdf',
+            filename: 'my-pdf'
+        });
+    });
+});
+</script>
 </html>
