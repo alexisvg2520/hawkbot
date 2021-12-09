@@ -402,8 +402,9 @@
 
 <!--HighCharts-->
 <script src="dist/highcharts/highcharts.js"></script>
-
-<script src="dist\js\pages\excelexportjs.js"></script>
+<script src="dist\highcharts\modules\exporting.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
 
 
 </body>

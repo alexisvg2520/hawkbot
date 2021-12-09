@@ -39,10 +39,7 @@ $(document).ready(function() {
          data: {ciudad:ciudad, producto:producto, anio:anio},
          datatype:'json',
          success:function(data) {
-            //alert( 'El servidor devolvio "' + data + '"' );
-            //$("#mostrar_json").html(data);
             let objeto_JSON = $.parseJSON(data);
-            alert(objeto_JSON.mar);
             $("#mostrar_tabla thead").append("<tr>"+"<th scope='col'>Ene</th>"+
                                                 "<th scope='col'>Feb</th>"+
                                                 "<th scope='col'>Mar</th>"+
@@ -64,66 +61,99 @@ $(document).ready(function() {
             
          }
       });
+      
 
-   
+      var json_s=[];
+      $.ajax({
+         url: "dist/php/mostrar_datos.php",
+         type: 'post',
+         async: false,
+         data: {ciudad:ciudad, producto:producto, anio:anio},
+         datatype:'json',
+         success:function(data) {
+            let objeto_JSON = $.parseJSON(data);
+            $.each(objeto_JSON, function(index, value) {
+               $.each(value, function (key, val) {
+                  json_s=val;
+              });
+            });
+            checkDrink();
+         },
+      });
 
+      function checkDrink() {
+         alert(json_s);
+      }  
+     
 
     
-    $("#figura1").fadeIn(3000,function(){
-      var title= {
-    
-        text: 'VENTAS EN LA CIUDAD DE ' + ciudad
+      $("#figura1").fadeIn(3000,function(){
+
+         var title= {
+      
+         text: 'VENTAS EN LA CIUDAD DE ' + ciudad
+            
+         };
+      
+            
+         var subtitle = {
+            text: producto + ' en el año de ' + anio
+         };
+         var xAxis = {
+            categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+               'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+         };
+         var yAxis = {
+            title: {
+               text: 'Ventas ($ USD)'
+            },
+            plotLines: [{
+               value: 0,
+               width: 1,
+               color: '#808080'
+            }]
+         };   
          
-     };
-    
-          
-     var subtitle = {
-        text: producto + ' en el año de ' + anio
-     };
-     var xAxis = {
-        categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
-           'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
-     };
-     var yAxis = {
-        title: {
-           text: 'Ventas ($ USD)'
-        },
-        plotLines: [{
-           value: 0,
-           width: 1,
-           color: '#808080'
-        }]
-     };   
-   
-     var tooltip = {
-        valueSuffix: '\xB0C'
-     }
-     var legend = {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-        borderWidth: 0
-     };
-     var series =  [{
-           name: 'Tokyo',
-           data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
-              26.5, 23.3, 18.3, 13.9, 9.6]
-        }, 
-     ];
-   
-     var json = {};
-     json.title = title;
-     json.subtitle = subtitle;
-     json.xAxis = xAxis;
-     json.yAxis = yAxis;
-     json.tooltip = tooltip;
-     json.legend = legend;
-     json.series = series;
-   
-     $('#container').highcharts(json);
+         var tooltip = {
+            valueSuffix: '$ USD'
+         }
+         var legend = {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+         };
+         var series =  [{
+               name: ciudad,
+               data: [JSON.stringify(json_s)]
+            } 
+         ];
+         
+         var json = {};
+         json.title = title;
+         json.subtitle = subtitle;
+         json.xAxis = xAxis;
+         json.yAxis = yAxis;
+         json.tooltip = tooltip;
+         json.legend = legend;
+         json.series = series;
+         
+         $('#container').highcharts(json);
 
-    });
-  });
+         $("#btnPDF").click(function(){
+
+            var chart = $('#container').highcharts();
+            chart.exportChar({
+               type: 'application/pdf',
+               filename: 'my-pdf'
+            });
+      
+         });
+
+      });
+   });
+
+   
 
    
 
