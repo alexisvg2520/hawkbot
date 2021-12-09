@@ -264,6 +264,9 @@
               <div class="card-body">
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
+                  <?php
+                    include("dist\php\mostrar_datos.php");
+                  ?>
                   <table class="highchart" data-graph-container="highchart-container" data-graph-type="column">
 
                   </table>
@@ -297,7 +300,7 @@
                 <!-- Selección de datos -->
                 <div class="form-group">
                   <label for="ciudades">Seleccione la Ciudad</label>
-                  <select class="form-control" name="opcion_ciudades">
+                  <select class="form-control" id="opcion_ciudades">
                     <option>Ciudad</option>
                     <option name ="Quito" value="1">Quito</option>
                     <option name ="Guayaquil" value="2">Guayaquil</option>
@@ -305,7 +308,7 @@
                 </div>
                 <div class="form-group">
                   <label for="productos">Seleccione el Producto </label>
-                  <select class="form-control" name="opcion_productos">
+                  <select class="form-control" id="opcion_productos">
                     <option>Producto </option>
                     <option name ="Computadora" value="1">Computadora</option>
                     <option name ="Laptop" value="2">Laptop</option>

@@ -27,8 +27,8 @@ $(document).ready(function() {
 
   $("#btn_filtrar").click(function(){
 
-    let ciudad=$("[name='opcion_ciudades'] option:selected").text();
-    let producto=$("[name='opcion_productos'] option:selected").text();
+    let ciudad=$("#opcion_ciudades option:selected").text();
+    let producto=$("#opcion_productos option:selected").text();
     let anio=$("#fecha").val();
 
     $("#figura1").fadeIn(3000,function(){
@@ -83,13 +83,6 @@ $(document).ready(function() {
      json.series = series;
    
      $('#container').highcharts(json);
-
-     $("#btn_filtrar").click(function(){
-      $('table.highchart').bind('highchartTable.beforeRender', function(event, highChartConfig) {
-        highChartConfig.colors = ['#104C4C', '#88CCCC', '#228E8E', '#CCFFFF', '#00CCCC', '#3399CC'];
-      }).highchartTable();
-     });
-     
 
     });
   });
