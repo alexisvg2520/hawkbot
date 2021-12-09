@@ -30,7 +30,6 @@ $(document).ready(function() {
     let ciudad=$("[name='opcion_ciudades'] option:selected").text();
     let producto=$("[name='opcion_productos'] option:selected").text();
     let anio=$("#fecha").val();
-    let a = $('#DynamicValueAssignedHere').find('input[name="f_fecha"]').text();
 
     $("#figura1").fadeIn(3000,function(){
       var title= {
