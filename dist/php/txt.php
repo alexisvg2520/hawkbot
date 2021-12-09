@@ -44,14 +44,14 @@ if(isset($_POST["ciudad"]) && isset($_POST["producto"])){
 }
 
 
-$rs = mysql_query($data,$connec);
-if (mysql_num_rows($rs) != 0) {
+$rs = mysqli_query($connec,$data);
+if (mysqli_num_rows($rs) != 0) {
     $jump = "\r\n";
     $separator = "\t";
     $fp = fopen($file, 'a');
     $registro = 'ventas' . $data;
     fwrite($fp, $registro);
-    while($row = mysql_fetch_array($rs)) {
+    while($row = mysqli_fetch_array($rs)) {
         $registro = $row['$data'] ;
         fwrite($fp, $registro);
     }
