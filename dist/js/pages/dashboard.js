@@ -125,7 +125,7 @@ $(document).ready(function() {
          };
          var series =  [{
                name: ciudad,
-               data: [JSON.stringify(json_s)]
+               data: [1,2,3,4,5,6,7,8,9,10,11,12]
             } 
          ];
          
@@ -139,17 +139,6 @@ $(document).ready(function() {
          json.series = series;
          
          $('#container').highcharts(json);
-
-         $("#btnPDF").click(function(){
-
-            var chart = $('#container').highcharts();
-            chart.exportChar({
-               type: 'application/pdf',
-               filename: 'my-pdf'
-            });
-      
-         });
-
       });
    });
 

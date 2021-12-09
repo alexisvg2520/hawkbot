@@ -406,16 +406,19 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-
-</body>
-
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-
 <script languaje="JavaScript">
   $(function () {
     window.chart = new Highcharts.Chart({
-        chart: {renderTo : 'container'}
+        chart: {renderTo : 'container'},
+        title: {
+            text: 'Tabla de Ventas'
+        },
+        xAxis: {
+            categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun','Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+        },
+        series: [{
+            data: []        
+        }]
     });
 
     $("#btnPDF").click(function(){
@@ -427,6 +430,21 @@
             filename: 'my-pdf'
         });
     });
+    $("#btnPNG").click(function(){
+        // Export method ?
+        // Ajax call ?
+        var chart = $('#container').highcharts();
+        chart.exportChart({
+            type: 'image/png',
+            filename: 'my-png'
+        });
+    });
 });
 </script>
+
+
+</body>
+
+
+
 </html>
