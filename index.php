@@ -251,7 +251,7 @@
                   <i class="fas fa-table mr-1"></i>
                   Tabla
                 </h3>
-
+                
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <button type="button" class="btn btn-sm" data-card-widget="collapse" title="Collapse">
