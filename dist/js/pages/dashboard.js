@@ -25,9 +25,6 @@ $(function () {
 
 $(document).ready(function() {
 
-   var $head =$("#mostrar_tabla"),
-   str ='<thead> <tr> <th scope="col">Ene</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Abr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th> <th scope="col">Ago</th> <th scope="col">Sep</th> <th scope="col">Oct</th> <th scope="col">Nov</th> <th scope="col">Dic</th> </tr> </thead>';
-   $head.append(str);
   $("#btn_filtrar").click(function(){
 
     let ciudad=$("#opcion_ciudades option:selected").text();
@@ -39,12 +36,27 @@ $(document).ready(function() {
       method: 'POST',
       async: true,
       data: {ciudad:ciudad, producto:producto, anio:anio},
+      datatype:'json',
       cache: false,
       success:function(data) {
          alert( 'El servidor devolvio "' + data + '"' );
-         $("#cuerpo_tabla").html(data);
+         $("#mostrar_json").html(data);
+         
+         
       }
     });
+
+    $.getJSON("dist/php/mostrar_datos.php" , function(data) {
+      var tbl_body = "";
+      $.each(data, function() {
+          var tbl_row = "";
+          $.each(this, function(k , v) {
+              tbl_row += "<td>"+v+"</td>";
+          })
+          tbl_body += "<tr>"+tbl_row+"</tr>";                 
+      })
+      $("#mostrar_tabla tbody").html(tbl_body);
+  });
 
 
     

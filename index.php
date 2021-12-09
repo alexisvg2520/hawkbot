@@ -264,12 +264,30 @@
               <div class="card-body">
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
-                  
-                  <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
+                  <table class="table table-bordered table-striped table-dark">
+                    <thead> 
+                      <tr> 
+                        <th scope="col">Ene</th>
+                        <th scope="col">Feb</th>
+                        <th scope="col">Mar</th>
+                        <th scope="col">Abr</th>
+                        <th scope="col">May</th>
+                        <th scope="col">Jun</th>
+                        <th scope="col">Jul</th>
+                        <th scope="col">Ago</th>
+                        <th scope="col">Sep</th>
+                        <th scope="col">Oct</th>
+                        <th scope="col">Nov</th>
+                        <th scope="col">Dic</th>
+                      </tr>
+                    </thead>
                   </table>
-                  <div id="dvjson"></div>
-                  <table id="cuerpo_tabla">
+                  <div id="mostrar_json"></div>
+                  <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
+  
+                    <tfoot>
 
+                    </tfoot>
                   </table>
                 </div>
               </div>
