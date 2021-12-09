@@ -39,6 +39,7 @@ $(document).ready(function() {
       cache: false,
       success:function(data) {
          alert( 'El servidor devolvio "' + data + '"' );
+         $("#mostrar_tabla").html(data);
       }
     });
 

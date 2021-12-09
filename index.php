@@ -27,10 +27,10 @@
 <body class="hold-transition sidebar-mini layout-fixed dark-mode">
 <div class="wrapper">
 
-  <!-- Preloader 
+  <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/hawkBotLogo.png" alt="AdminLTELogo" height="60" width="250">
-  </div>-->
+  </div>
   
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-dark">
@@ -264,10 +264,9 @@
               <div class="card-body">
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
-                  <?php
-                    include("dist\php\mostrar_datos.php");
-                  ?>
-                  <table class="highchart" data-graph-container="highchart-container" data-graph-type="column">
+
+                  <table class="highchart" data-graph-container="highchart-container" data-graph-type="column" 
+                          id="mostrar_tabla">
 
                   </table>
                 </div>
