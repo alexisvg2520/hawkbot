@@ -38,34 +38,24 @@ $data = array ("ene" =>round ($enero['s'],1),
 "nov"=>round($noviembre['s'],1),
 "dic"=>round($diciembre['s'],1));
 
-echo "<table>
-<caption>Reportes</caption>  
-<tr> 
-    <th >Ene</th>
-    <th >Feb</th>
-    <th >Mar</th>
-    <th >Abr</th>
-    <th >May</th>
-    <th >Jun</th>
-    <th >Jul</th>
-    <th >Ago</th>
-    <th >Sep</th>
-    <th >Oct</th>
-    <th >Nov</th>
-    <th >Dic</th>
-</tr>";
+$result = $connec->query($enero);
 
+echo "<table>";
+echo "<caption>Reportes</caption>";
+echo "<tr>";
+echo " <th >Ene</th>";
+echo " <th >Feb</th>";
 
-$resultado = mysqli_query($connec, $data);
-while($row=mysqli_fetch_assoc($resultado)){ 
+echo "</tr>";
+
+while($row=$result->fetch_array(MYSQLI_ASSOC)){ 
     echo "<tr>  <td>" .  $row["$data"] ."</td> </tr>";
-     } mysqli_free_result($resultado);
+     } 
+     echo "</table>";
+
+$result->free();
     }
 }
-echo "</table>";
-
-
-?>
 
 
 
