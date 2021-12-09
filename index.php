@@ -318,7 +318,7 @@
                 </div>
                 <div class="form-group">
                   <label for="fecha">Fecha</label>
-                  <input name="f_fecha" class="form-control" id ="fecha" type="number" placeholder="YYYY" min="2000" max="2020">
+                  <input name="f_fecha" class="form-control" id ="fecha" type="number" placeholder="YYYY" min="2010" max="2020">
                 </div>
                 
               </div>
