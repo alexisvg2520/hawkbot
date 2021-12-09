@@ -264,9 +264,10 @@
               <div class="card-body">
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
-                  <div id="dvjson"></div
+                  
                   <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
                   </table>
+                  <div id="dvjson"></div>
                   <table id="cuerpo_tabla">
 
                   </table>
@@ -325,10 +326,10 @@
               <!-- /.card-body-->
               <div class="card-footer clearfix">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-secondary">PDF</button>
-                  <button type="button" class="btn btn-secondary">PNG</button>
-                  <button type="button" class="btn btn-secondary" id="DLtoExcel">Excel</button>
-                  <button type="button" class="btn btn-secondary">TXT</button>
+                  <button type="button" class="btn btn-secondary" id="btnPDF">PDF</button>
+                  <button type="button" class="btn btn-secondary" id="btnPNG">PNG</button>
+                  <button type="button" class="btn btn-secondary" id="btnExcel">Excel</button>
+                  <button type="button" class="btn btn-secondary" id="btnTXT">TXT</button>
                 </div>
                 <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>
               </div>
