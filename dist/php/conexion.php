@@ -87,7 +87,7 @@ try {
       $sql32 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',3904,'Guayaquil','2012-11-01')";
       $sql33 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',2900,'Quito','2015-05-01')";
       $sql34 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',1028,'Guayaquil','2012-10-01')";
-      $sql35 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',900,'Guayaquil','2005-04-01')";
+      $sql35 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',900,'Guayaquil','2015-04-01')";
       $sql36 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',1000,'Quito','2019-02-01')";
       $sql37 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',1990,'Guayaquil','2018-07-01')";
       $sql38 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Celular',1990,'Quito','2018-07-01')";
