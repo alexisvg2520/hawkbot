@@ -251,7 +251,7 @@
                   <i class="fas fa-table mr-1"></i>
                   Tabla
                 </h3>
-
+                
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <button type="button" class="btn btn-sm" data-card-widget="collapse" title="Collapse">
@@ -351,7 +351,7 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-secondary" id="btnPDF">PDF</button>
                   <button type="button" class="btn btn-secondary" id="btnPNG">PNG</button>
-                  <button type="button" class="btn btn-secondary" id="btnExcel">Excel</button>
+                  <button type="button" class="btn btn-secondary" id="btnExcel" a href="generar_excel.php">Excel</button>
                   <button type="button" class="btn btn-secondary" id="btnTXT">TXT</button>
                 </div>
                 <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>
@@ -408,4 +408,25 @@
 
 
 </body>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script languaje="JavaScript">
+  $(function () {
+    window.chart = new Highcharts.Chart({
+        chart: {renderTo : 'container'}
+    });
+
+    $("#btnPDF").click(function(){
+        // Export method ?
+        // Ajax call ?
+        var chart = $('#container').highcharts();
+        chart.exportChart({
+            type: 'application/pdf',
+            filename: 'my-pdf'
+        });
+    });
+});
+</script>
 </html>
