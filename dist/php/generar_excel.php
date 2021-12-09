@@ -37,10 +37,8 @@ $data = array ("ene" =>round ($enero['s'],1),
 "oct"=>round($octubre['s'],1),  
 "nov"=>round($noviembre['s'],1),
 "dic"=>round($diciembre['s'],1));
-    }
-}
 
-<table>
+echo "<table>
 <caption>Reportes</caption>  
 <tr> 
     <th >Ene</th>
@@ -55,14 +53,21 @@ $data = array ("ene" =>round ($enero['s'],1),
     <th >Oct</th>
     <th >Nov</th>
     <th >Dic</th>
-</tr>
+</tr>";
 
-<?php $resultado = mysqli_query($connec, json_encode($data));
-while($row=mysqli_fetch_assoc($resultado)){ ?>
 
-echo "<tr>  <td>" .  $row["$data"] ."</td> </tr>";
-<?php } mysqli_free_result($resultado); ?>
+$resultado = mysqli_query($connec, $data);
+while($row=mysqli_fetch_assoc($resultado)){ 
+    echo "<tr>  <td>" .  $row["$data"] ."</td> </tr>";
+     } mysqli_free_result($resultado);
+    }
 }
-}
- </table>
+echo "</table>";
+
+
 ?>
+
+
+
+
+ 
