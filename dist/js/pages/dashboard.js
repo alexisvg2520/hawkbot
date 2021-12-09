@@ -32,32 +32,17 @@ $(document).ready(function() {
     let anio=$("#fecha").val();
 
     $.ajax({
-      url: 'dist\php\mostrar_datos.php',
-      type: 'POST',
+      url: "dist/php/mostrar_datos.php",
+      method: 'POST',
       async: true,
-      data: ciudad,
-      success: procesaRespuesta,
-      error: muestraError
-    });
-    $.ajax({
-      url: 'dist\php\mostrar_datos.php',
-      type: 'POST',
-      async: true,
-      data: producto,
-      success: procesaRespuesta,
-      error: muestraError
+      data: {ciudad:ciudad, producto:producto, anio:anio},
+      cache: false,
+      success:function(data) {
+         alert( 'El servidor devolvio "' + data + '"' );
+      }
     });
 
-    $.ajax({
-      url: 'dist\php\mostrar_datos.php',
-      type: 'POST',
-      async: true,
-      data: anio,
-      success: procesaRespuesta,
-      error: muestraError
-    });
-
-
+    /*
     $("#figura1").fadeIn(3000,function(){
       var title= {
     
@@ -111,7 +96,7 @@ $(document).ready(function() {
    
      $('#container').highcharts(json);
 
-    });
+    });*/
   });
 
   
