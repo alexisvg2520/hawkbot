@@ -1,11 +1,7 @@
 <<?php
-$servername = "localhost";
-$username = "prueba";
-$password = "c8u$7ShG";
-$dbname = "reportes";
+include("db.inc.php");
 
-$connec = mysql_connect($servername,$username,$password);
 
-mysql_select_db($dbname,$connec);
+$conexion = mysqli_connect('$servername', '$username',  '$password'  );
 
-?>
+mysqli_select_db('$dbname', $conexion);
