@@ -20,7 +20,7 @@
   <!-- Figuras -->
   <link rel="stylesheet" href="dist\highcharts\css\highcharts.css">
   <link rel="stylesheet" href="dist\highcharts\css\themes\sand-signika.css">
-  <link rel="stylesheet" href="dist\css\figura.css">
+  <link rel="stylesheet" href="dist\css\styles.css">
   
  
 </head>
@@ -264,9 +264,10 @@
               <div class="card-body">
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
-
-                  <table class="highchart" data-graph-container="highchart-container" data-graph-type="column" 
-                          id="mostrar_tabla">
+                  <div id="dvjson"></div
+                  <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
+                  </table>
+                  <table id="cuerpo_tabla">
 
                   </table>
                 </div>
@@ -326,7 +327,7 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-secondary">PDF</button>
                   <button type="button" class="btn btn-secondary">PNG</button>
-                  <button type="button" class="btn btn-secondary">Excel</button>
+                  <button type="button" class="btn btn-secondary" id="DLtoExcel">Excel</button>
                   <button type="button" class="btn btn-secondary">TXT</button>
                 </div>
                 <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>
@@ -377,6 +378,8 @@
 
 <!--HighCharts-->
 <script src="dist/highcharts/highcharts.js"></script>
+
+<script src="dist\js\pages\excelexportjs.js"></script>
 
 
 </body>
