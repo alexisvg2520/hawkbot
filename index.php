@@ -265,7 +265,7 @@
                 <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
                   <table class="table table-bordered table-striped table-dark">
-                    <thead> 
+                    <!--<thead> 
                       <tr> 
                         <th scope="col">Ene</th>
                         <th scope="col">Feb</th>
@@ -280,10 +280,13 @@
                         <th scope="col">Nov</th>
                         <th scope="col">Dic</th>
                       </tr>
-                    </thead>
+                    </thead>-->
                   </table>
                   <div id="mostrar_json"></div>
                   <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
+                    <thead>
+
+                    </thead> 
                     <tbody>
                     
                     </tbody>
@@ -348,7 +351,7 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-secondary" id="btnPDF">PDF</button>
                   <button type="button" class="btn btn-secondary" id="btnPNG">PNG</button>
-                  <button type="button" class="btn btn-secondary" id="btnExcel">Excel</button>
+                  <button type="button" class="btn btn-secondary" id="btnExcel" a href="generar_excel.php">Excel</button>
                   <button type="button" class="btn btn-secondary" id="btnTXT">TXT</button>
                 </div>
                 <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>

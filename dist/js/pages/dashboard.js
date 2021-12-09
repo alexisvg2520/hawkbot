@@ -25,57 +25,45 @@ $(function () {
 
 $(document).ready(function() {
 
-  $("#btn_filtrar").click(function(){
-
-    let ciudad=$("#opcion_ciudades option:selected").text();
-    let producto=$("#opcion_productos option:selected").text();
-    let anio=$("#fecha").val();   
-
-    $.ajax({
-      url: "dist/php/mostrar_datos.php",
-      type: 'get',
-      //async: true,
-      data: {ciudad:ciudad, producto:producto, anio:anio},
-      datatype:'json',
-      success:function(data) {
-         //alert( 'El servidor devolvio "' + data + '"' );
-         $("#mostrar_json").html(data);
-         let objeto_JSON = $.parseJSON(response);
-
-         objeto_JSON.forEach(function (elemento) {
-                var ene = elemento.ene;
-                var feb = elemento.feb;
-                var mar = elemento.mar;
-                var abr = elemento.abr;
-                var may = elemento.may;
-                var jun = elemento.jun;
-                var jul = elemento.jul;
-                var ago = elemento.ago;
-                var sep = elemento.sep;
-                var oct = elemento.oct;
-                var nov = elemento.nov;
-                var dic = elemento.dic;
-
-                var tr_str = "<tr>" +
-                    "<td align='center'>" + ene + "</td>" +
-                    "<td align='center'>" + feb + "</td>" +
-                    "<td align='center'>" + mar + "</td>" +
-                    "<td align='center'>" + abr + "</td>" +
-                    "<td align='center'>" + may + "</td>" +
-                    "<td align='center'>" + jun + "</td>" +
-                    "<td align='center'>" + jul + "</td>" +
-                    "<td align='center'>" + ago + "</td>" +
-                    "<td align='center'>" + sep + "</td>" +
-                    "<td align='center'>" + oct + "</td>" +
-                    "<td align='center'>" + nov + "</td>" +
-                    "<td align='center'>" + dic + "</td>" +
-                    "</tr>";
-
-                $("#mostrar_tabla tbody").append(tr_str);
-         });
-         
-      }
-    });
+   $("#btn_filtrar").click(function(){
+      $("#mostrar_tabla thead").empty();
+      $("#mostrar_tabla tbody").empty();
+      let ciudad=$("#opcion_ciudades option:selected").text();
+      let producto=$("#opcion_productos option:selected").text();
+      let anio=$("#fecha").val(); 
+      
+      $.ajax({
+         url: "dist/php/mostrar_datos.php",
+         type: 'post',
+         async: true,
+         data: {ciudad:ciudad, producto:producto, anio:anio},
+         datatype:'json',
+         success:function(data) {
+            //alert( 'El servidor devolvio "' + data + '"' );
+            //$("#mostrar_json").html(data);
+            let objeto_JSON = $.parseJSON(data);
+            alert(objeto_JSON.mar);
+            $("#mostrar_tabla thead").append("<tr>"+"<th scope='col'>Ene</th>"+
+                                                "<th scope='col'>Feb</th>"+
+                                                "<th scope='col'>Mar</th>"+
+                                                "<th scope='col'>Abr</th>"+
+                                                "<th scope='col'>May</th>"+
+                                                "<th scope'col'>Jun</th>"+
+                                                "<th scope='col'>Jul</th>"+
+                                                "<th scope='col'>Ago</th>"+
+                                                "<th scope='col'>Sep</th>"+
+                                                "<th scope='col'>Oct</th>"+
+                                                "<th scope='col'>Nov</th>"+
+                                                "<th scope='col'>Dic</th>"+
+                                             "</tr>");
+            $("#mostrar_tabla tbody").append("<tr>");
+            $.each(objeto_JSON, function(i, value) {
+               $("#mostrar_tabla tbody").append("<td align='center'>"+value+"</td>");
+            });
+            $("#mostrar_tabla tbody").append("</tr>");
+            
+         }
+      });
 
    
 
