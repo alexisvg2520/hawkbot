@@ -33,30 +33,51 @@ $(document).ready(function() {
 
     $.ajax({
       url: "dist/php/mostrar_datos.php",
-      method: 'POST',
-      async: true,
+      type: 'get',
+      //async: true,
       data: {ciudad:ciudad, producto:producto, anio:anio},
       datatype:'json',
-      cache: false,
       success:function(data) {
-         alert( 'El servidor devolvio "' + data + '"' );
+         //alert( 'El servidor devolvio "' + data + '"' );
          $("#mostrar_json").html(data);
-         
+         let objeto_JSON = $.parseJSON(response);
+
+         objeto_JSON.forEach(function (elemento) {
+                var ene = elemento.ene;
+                var feb = elemento.feb;
+                var mar = elemento.mar;
+                var abr = elemento.abr;
+                var may = elemento.may;
+                var jun = elemento.jun;
+                var jul = elemento.jul;
+                var ago = elemento.ago;
+                var sep = elemento.sep;
+                var oct = elemento.oct;
+                var nov = elemento.nov;
+                var dic = elemento.dic;
+
+                var tr_str = "<tr>" +
+                    "<td align='center'>" + ene + "</td>" +
+                    "<td align='center'>" + feb + "</td>" +
+                    "<td align='center'>" + mar + "</td>" +
+                    "<td align='center'>" + abr + "</td>" +
+                    "<td align='center'>" + may + "</td>" +
+                    "<td align='center'>" + jun + "</td>" +
+                    "<td align='center'>" + jul + "</td>" +
+                    "<td align='center'>" + ago + "</td>" +
+                    "<td align='center'>" + sep + "</td>" +
+                    "<td align='center'>" + oct + "</td>" +
+                    "<td align='center'>" + nov + "</td>" +
+                    "<td align='center'>" + dic + "</td>" +
+                    "</tr>";
+
+                $("#mostrar_tabla tbody").append(tr_str);
+         });
          
       }
     });
 
-    $.getJSON("dist/php/mostrar_datos.php" , function(data) {
-      var tbl_body = "";
-      $.each(data, function() {
-          var tbl_row = "";
-          $.each(this, function(k , v) {
-              tbl_row += "<td>"+v+"</td>";
-          })
-          tbl_body += "<tr>"+tbl_row+"</tr>";                 
-      })
-      $("#mostrar_tabla tbody").html(tbl_body);
-  });
+   
 
 
     

@@ -284,7 +284,9 @@
                   </table>
                   <div id="mostrar_json"></div>
                   <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
-  
+                    <tbody>
+                    
+                    </tbody>
                     <tfoot>
 
                     </tfoot>
