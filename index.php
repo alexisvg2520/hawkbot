@@ -251,7 +251,7 @@
                   <i class="fas fa-table mr-1"></i>
                   Tabla
                 </h3>
-
+                
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <button type="button" class="btn btn-sm" data-card-widget="collapse" title="Collapse">
@@ -403,9 +403,49 @@
 
 <!--HighCharts-->
 <script src="dist/highcharts/highcharts.js"></script>
+<script src="dist\highcharts\modules\exporting.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<script src="dist\js\pages\excelexportjs.js"></script>
+<script languaje="JavaScript">
+  $(function () {
+    window.chart = new Highcharts.Chart({
+        chart: {renderTo : 'container'},
+        title: {
+            text: 'Tabla de Ventas'
+        },
+        xAxis: {
+            categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun','Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+        },
+        series: [{
+            data: []        
+        }]
+    });
+
+    $("#btnPDF").click(function(){
+        // Export method ?
+        // Ajax call ?
+        var chart = $('#container').highcharts();
+        chart.exportChart({
+            type: 'application/pdf',
+            filename: 'my-pdf'
+        });
+    });
+    $("#btnPNG").click(function(){
+        // Export method ?
+        // Ajax call ?
+        var chart = $('#container').highcharts();
+        chart.exportChart({
+            type: 'image/png',
+            filename: 'my-png'
+        });
+    });
+});
+</script>
 
 
 </body>
+
+
+
 </html>
