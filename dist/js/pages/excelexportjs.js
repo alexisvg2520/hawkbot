@@ -262,7 +262,7 @@
 
 
 //get columns
-function getColumns(paramData){
+/*function getColumns(paramData){
 
 	var header = [];
 	$.each(paramData[0], function (key, value) {
@@ -276,3 +276,4 @@ function getColumns(paramData){
 	return header;
 
 }
+*/
