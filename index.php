@@ -353,7 +353,8 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-secondary" id="btnPDF">PDF</button>
                   <button type="button" class="btn btn-secondary" id="btnPNG">PNG</button>
-                  <button type="button" class="btn btn-secondary" id="btnExcel" a href="generar_excel.php">Excel</button>
+                  <a href ='dist\php\generar_excel.php'>
+                  <button type="button" class="btn btn-secondary" id="btnExcel">Excel</button> </a>
                   <button type="button" class="btn btn-secondary" id="btnTXT">TXT</button>
                 </div>
                 <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>
