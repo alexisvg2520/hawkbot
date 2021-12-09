@@ -281,9 +281,11 @@
                         <th scope="col">Dic</th>
                       </tr>
                     </thead>-->
+
                   </table>
                   <div id="mostrar_json"></div>
-                  <table id="mostrar_tabla" class="table table-bordered table-striped table-dark">
+                  <table id="mostrar_tabla" class="table-responsive table-bordered table-dark"
+                          data-graph-container-before="1" data-graph-type="column">
                     <thead>
 
                     </thead> 
@@ -415,6 +417,16 @@
         },
         xAxis: {
             categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun','Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+        },
+        yAxis:{
+          title: {
+               text: 'Ventas ($ USD)'
+            },
+          plotLines: [{
+               value: 0,
+               width: 1,
+               color: '#808080'
+          }]
         },
         series: [{
             data: []        

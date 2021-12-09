@@ -63,7 +63,7 @@ $(document).ready(function() {
       });
       
 
-      var json_s=[];
+      var json_s;
       $.ajax({
          url: "dist/php/mostrar_datos.php",
          type: 'post',
@@ -71,19 +71,18 @@ $(document).ready(function() {
          data: {ciudad:ciudad, producto:producto, anio:anio},
          datatype:'json',
          success:function(data) {
+            let len= data.length;
             let objeto_JSON = $.parseJSON(data);
             $.each(objeto_JSON, function(index, value) {
-               $.each(value, function (key, val) {
-                  json_s=val;
-              });
+               //alert(value);
             });
-            checkDrink();
+            //checkDrink();
          },
       });
 
-      function checkDrink() {
+      /*function checkDrink() {
          alert(json_s);
-      }  
+      }  */
      
 
     
