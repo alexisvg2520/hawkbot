@@ -236,15 +236,10 @@
                 <div class="tab-content p-0">
                   <!--Aquí va el gráfico-->
                   
-                  <figure class="highcharts-figure  rounded-3">
+                  <figure class="highcharts-figure  rounded-3" id="figura1">
                     <div class="figura" id="container"></div>
-                    <br>
-                    <p class="highcharts-description">
-                        Demonstrating a basic area chart, also known as a mountain chart.
-                        Area charts are similar to line charts, but commonly used to visualize
-                        volumes.
-                    </p>
                   </figure>
+                  <!--acaba el gráfico-->
                 </div>
               </div><!-- /.card-body -->
             </div>
@@ -267,7 +262,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <div class="tab-content p-0">
+                <div class="tab-content p-0" id="tabla">
                   <!--Aquí va la tabla-->
 
                 </div>
@@ -300,7 +295,7 @@
                 <!-- Selección de datos -->
                 <div class="form-group">
                   <label for="ciudades">Seleccione la Ciudad</label>
-                  <select class="form-control" id="opcion_ciudades">
+                  <select class="form-control" name="opcion_ciudades">
                     <option>Ciudad</option>
                     <option value="1">Quito</option>
                     <option value="2">Guayaquil</option>
@@ -308,17 +303,17 @@
                 </div>
                 <div class="form-group">
                   <label for="productos">Seleccione el Producto </label>
-                  <select class="form-control" id="opcion_productos">
+                  <select class="form-control" name="opcion_productos">
                     <option>Producto </option>
-                    <option value="1">Computadora</option>
-                    <option value="2">Laptop</option>
-                    <option value="3">Celular</option>
+                    <option value="1">Computadoras</option>
+                    <option value="2">Laptops</option>
+                    <option value="3">Celulares</option>
                 
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="fecha">Fecha</label>
-                  <input class="form-control" id ="fecha" type="number" placeholder="YYYY" min="2000" max="2020">
+                  <input name="f_fecha" class="form-control" id ="fecha" type="number" placeholder="YYYY" min="2000" max="2020">
                 </div>
                 
               </div>
@@ -330,7 +325,7 @@
                   <button type="button" class="btn btn-secondary">Excel</button>
                   <button type="button" class="btn btn-secondary">TXT</button>
                 </div>
-                <button type="button" class="btn btn-primary float-right"><i class="ion ion-gear-a"></i> Filtrar</button>
+                <button type="button" class="btn btn-primary float-right" id="btn_filtrar"><i class="ion ion-gear-a"></i> Filtrar</button>
               </div>
             </div>
             <!-- /.card -->
@@ -378,79 +373,6 @@
 
 <!--HighCharts-->
 <script src="dist/highcharts/highcharts.js"></script>
-
-<script language = "JavaScript">
-  $(document).ready(function() {
-
-
-     var title= {
-       
-        text: ''
-         
-     };
-    
-          
-     var subtitle = {
-        text: 'VENTAS DE COMPUTADORAS EN LA CIUDAD DE QUITO AÑO 2014'
-     };
-     var xAxis = {
-        categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
-           'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
-     };
-     var yAxis = {
-        title: {
-           text: 'Temperatura (\xB0C)'
-        },
-        plotLines: [{
-           value: 0,
-           width: 1,
-           color: '#808080'
-        }]
-     };   
-
-     var tooltip = {
-        valueSuffix: '\xB0C'
-     }
-     var legend = {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-        borderWidth: 0
-     };
-     var series =  [{
-           name: 'Tokyo',
-           data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
-              26.5, 23.3, 18.3, 13.9, 9.6]
-        }, 
-        {
-           name: 'New York',
-           data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 
-              24.1, 20.1, 14.1, 8.6, 2.5]
-        }, 
-        {
-           name: 'Berlin',
-           data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6,
-              17.9, 14.3, 9.0, 3.9, 1.0]
-        }, 
-        {
-           name: 'London',
-           data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 
-              16.6, 14.2, 10.3, 6.6, 4.8]
-        }
-     ];
-
-     var json = {};
-     json.title = title;
-     json.subtitle = subtitle;
-     json.xAxis = xAxis;
-     json.yAxis = yAxis;
-     json.tooltip = tooltip;
-     json.legend = legend;
-     json.series = series;
-
-     $('#container').highcharts(json);
-  });
-</script>
 
 
 </body>
