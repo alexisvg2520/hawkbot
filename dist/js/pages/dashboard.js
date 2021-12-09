@@ -25,11 +25,19 @@ $(function () {
 
 $(document).ready(function() {
 
+   
+
   $("#btn_filtrar").click(function(){
 
     let ciudad=$("#opcion_ciudades option:selected").text();
     let producto=$("#opcion_productos option:selected").text();
     let anio=$("#fecha").val();
+    $("#mostrar_tabla").show(function(){
+      var $head =$("#mostrar_tabla"),
+      str ='<thead> <tr> <th scope="col">Ene</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Abr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th> <th scope="col">Ago</th> <th scope="col">Sep</th> <th scope="col">Oct</th> <th scope="col">Nov</th> <th scope="col">Dic</th> </tr> </thead>';
+      $head.append(str);
+    });
+    
 
     $.ajax({
       url: "dist/php/mostrar_datos.php",
@@ -39,11 +47,13 @@ $(document).ready(function() {
       cache: false,
       success:function(data) {
          alert( 'El servidor devolvio "' + data + '"' );
-         $("#mostrar_tabla").html(data);
+
+         $("#cuerpo_tabla").html(data);
       }
     });
 
-    /*
+
+    
     $("#figura1").fadeIn(3000,function(){
       var title= {
     
@@ -97,7 +107,7 @@ $(document).ready(function() {
    
      $('#container').highcharts(json);
 
-    });*/
+    });
   });
 
   
