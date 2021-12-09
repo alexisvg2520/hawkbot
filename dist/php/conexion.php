@@ -66,7 +66,7 @@ try {
       $sql11 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Computadora',2990,'Guayaquil','2020-03-01')";
       $sql12 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Computadora',7798,'Quito','2020-10-01')";
       $sql13 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Computadora',4993,'Guayaquil','2020-06-01')";
-      $sql14= "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',3094,'Quito','2014-04-01')";
+      $sql14 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',3094,'Quito','2014-04-01')";
       $sql15 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',2873,'Quito','2015-06-01')";
       $sql16 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',1727,'Quito','2016-09-01')";
       $sql17 = "INSERT INTO ventas (Nombre_producto, Costos, Ciudad, Fecha)VALUES('Laptop',2993,'Guayaquil','2017-08-01')";
